@@ -4,7 +4,7 @@
 # https://github.com/apache/arrow/blob/master/cpp/src/parquet/.parquetcppversion
 {% set parquet_version = "1.5.1" %}
 # Don't forget to update me!
-{% set arrow_version = "0.13.0" %}
+#{% set arrow_version = "0.13.0" %}
 
 package:
   name: parquet-cpp
@@ -16,9 +16,11 @@ build:
 
 requirements:
   host:
-    - arrow-cpp >={{ arrow_version }}
+    # - arrow-cpp >={{ arrow_version }}
+    - arrow-cpp
   run:
-    - arrow-cpp >={{ arrow_version }}
+    # - arrow-cpp >={{ arrow_version }}
+    - arrow-cpp
 
 test:
   commands:
